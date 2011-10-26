@@ -1,0 +1,6 @@
+<module>
+  <inherits name="ScalaLibrary"/>
+
+  <!-- Enable debug ID. -->
+  <source path="shared"/>
+</module>

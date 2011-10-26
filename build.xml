@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="Hello" default="build" basedir=".">
+  <!-- Arguments -style PRETTY or -logLevel DEBUG to gwtc and devmode targets -->
+  <property name="gwt.args" value="-draftCompile -ea -style pretty -logLevel TRACE" />
+  <property name="gwt.dev.args" value="-logLevel TRACE" />
+  <property name="scala.args" value="-g:notailcalls -Xplugin:${basedir}/lib/scala/factorymanifests.jar -Xplugin:lib/scala/continuations.jar -P:continuations:enable -Yjribble-text"/>
+
+  <path id="scala.client.class.path">
+    <fileset dir="lib/scala">
+      <include name="scala-compiler.jar"/>
+      <include name="scala-library.jar"/>
+      <include name="protobuf-java-2.4.1.jar"/>
+    </fileset>
+  </path>
+
+  <path id="scala.server.class.path">
+    <fileset dir="/Users/jhartman/lib/scala-2.9.1.final/lib/">
+      <include name="scala-compiler.jar"/>
+      <include name="scala-library.jar"/>
+    </fileset>
+  </path>
+
+  <path id="project.client.class.path">
+    <pathelement location="war/WEB-INF/classes"/>
+    <fileset dir="lib/gwt" includes="*.jar"/>
+    <pathelement location="lib/scala/scala-library-gwt.jar"/>
+    <!-- Add any additional non-server libs (such as JUnit) -->
+    <fileset dir="war/WEB-INF/lib" includes="**/*.jar"/>
+  </path>
+
+  <path id="project.server.class.path">
+    <pathelement location="war/WEB-INF/classes"/>
+    <fileset dir="lib/gwt" includes="*.jar"/>
+    <!-- Add any additional non-server libs (such as JUnit) -->
+    <fileset dir="war/WEB-INF/lib" includes="**/*.jar"/>
+    <fileset dir="/Users/jhartman/lib/scala-2.9.1.final/lib/">
+      <include name="scala-library.jar"/>
+    </fileset>
+  </path>
+
+  <target name="libs" description="Copy libs to WEB-INF/lib">
+    <mkdir dir="war/WEB-INF/lib" />
+    <copy todir="war/WEB-INF/lib" file="lib/gwt/gwt-servlet.jar" />
+  </target>
+
+  <target name="gwtc" depends="scalac-client" description="GWT compile to JavaScript">
+    <java failonerror="true" fork="true" classname="com.google.gwt.dev.Compiler">
+      <classpath>
+        <pathelement location="shared/src"/>
+        <pathelement location="client/src"/>
+        <pathelement location="war/WEB-INF/jribble"/>
+        <path refid="project.client.class.path"/>
+      </classpath>
+      <!-- add jvmarg -Xss16M or similar if you see a StackOverflowError -->
+      <jvmarg value="-Xmx512M"/>
+      <jvmarg value="-Dx.gwt.astBuilder=true"/>
+      <arg line="${gwt.args}"/>
+      <arg value="josh.Orgchart"/>
+    </java>
+  </target>
+  
+  <taskdef name="scalac-client" classname="scala.tools.ant.Scalac" classpathref="scala.client.class.path"/>
+
+  <taskdef name="scalac-server" classname="scala.tools.ant.Scalac" classpathref="scala.server.class.path"/>
+
+  <target name="scalac-client" description="Scalac compile to jribble">
+    <mkdir dir="war/WEB-INF/jribble"/>
+    <!-- TODO(grek): We should have a proper javabootclasspath here -->
+    <scalac-client srcdir="shared/src" destdir="war/WEB-INF/jribble" target="jribble" addparams="${scala.args}">
+      <include name="**/*.scala"/>
+      <include name="**/*.java"/>
+      <classpath refid="project.client.class.path"/>
+    </scalac-client>
+    <scalac-client srcdir="client/src" destdir="war/WEB-INF/jribble" target="jribble" addparams="${scala.args}">
+      <include name="**/*.scala"/>
+      <include name="**/*.java"/>
+      <classpath refid="project.client.class.path"/>
+    </scalac-client>
+
+    <mkdir dir="war/WEB-INF/classes"/>
+      <javac srcdir="shared/src" destdir="war/WEB-INF/classes">
+        <classpath refid="project.client.class.path"/>
+      </javac>
+      <javac srcdir="client/src" destdir="war/WEB-INF/classes">
+        <classpath refid="project.client.class.path"/>
+      </javac>
+  </target>
+
+    <target name="scalac-server" description="Scalac compile to class">
+      <mkdir dir="war/WEB-INF/classes"/>
+      <scalac-server srcdir="shared/src" destdir="war/WEB-INF/classes">
+        <include name="**/*.scala"/>
+        <include name="**/*.java"/>
+        <classpath refid="project.server.class.path"/>
+      </scalac-server>
+      <scalac-server srcdir="server/src" destdir="war/WEB-INF/classes">
+        <include name="**/*.scala"/>
+        <include name="**/*.java"/>
+        <classpath refid="project.server.class.path"/>
+      </scalac-server>
+
+      <javac srcdir="shared/src" destdir="war/WEB-INF/classes">
+        <classpath refid="project.server.class.path"/>
+      </javac>
+      <javac srcdir="server/src" destdir="war/WEB-INF/classes">
+        <classpath refid="project.server.class.path"/>
+      </javac>
+    </target>
+
+  <target name="devmode" depends="scalac-client" description="Run development mode">
+    <java failonerror="true" fork="true" classname="com.google.gwt.dev.DevMode">
+      <classpath>
+        <pathelement location="shared/src"/>
+        <pathelement location="client/src"/>
+        <pathelement location="war/WEB-INF/jribble"/>
+        <path refid="project.client.class.path"/>
+      </classpath>
+      <jvmarg value="-Xmx512M"/>
+      <jvmarg value="-Dx.gwt.astBuilder=true"/>
+      <arg value="-startupUrl"/>
+      <arg value="OrgChart.html"/>
+      <arg line="${gwt.dev.args}"/>
+      <arg value="josh.Orgchart"/>
+    </java>
+  </target>
+
+  <target name="build" depends="gwtc" description="Build this project" />
+
+  <target name="war" depends="build" description="Create a war file">
+    <zip destfile="Hello.war" basedir="war"/>
+  </target>
+
+  <target name="clean" description="Cleans this project">
+    <delete dir="war/WEB-INF/classes" failonerror="false" />
+    <delete dir="war/WEB-INF/jribble" failonerror="false" />
+    <delete dir="war/WEB-INF/deploy" failonerror="false" />
+    <delete dir="war/orgchart" failonerror="false" />
+    <delete dir="gwt-unitCache" failonerror="false" />
+    <delete dir="jribbleCache" failonerror="false" />
+    <delete dir="war/jribbleCache" failonerror="false" />
+    <delete file="Orgchart.war"/>
+  </target>
+
+</project>
