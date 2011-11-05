@@ -10,7 +10,7 @@
   </welcome-file-list>
 
     <!-- Servlets -->
-    <servlet>
+    <!--<servlet>
         <servlet-name>orgChartRpc</servlet-name>
         <servlet-class>josh.server.OrgChartServerRpc</servlet-class>
     </servlet>
@@ -18,6 +18,6 @@
     <servlet-mapping>
         <servlet-name>orgChartRpc</servlet-name>
         <url-pattern>/josh.Orgchart/company</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping>-->
 
 </web-app>
