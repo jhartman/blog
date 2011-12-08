@@ -1,0 +1,36 @@
+<component name="libraryTable">
+  <library name="Jetty">
+    <CLASSES>
+      <root url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib" />
+      <root url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib/jndi" />
+      <root url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib/ext" />
+      <root url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib/annotations" />
+      <root url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib/policy" />
+      <root url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib/monitor" />
+      <root url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib/jta" />
+      <root url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib/jsp" />
+      <root url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib" />
+      <root url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib/jndi" />
+      <root url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib/ext" />
+      <root url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib/annotations" />
+      <root url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib/policy" />
+      <root url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib/monitor" />
+      <root url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib/jta" />
+      <root url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib/jsp" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib" />
+      <root url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib/annotations" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib/ext" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib/jndi" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib/jsp" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib/jta" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib/monitor" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib/policy" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/apps/jetty-distribution-7.5.4.v20111024/lib" recursive="false" type="SOURCES" />
+  </library>
+</component>
