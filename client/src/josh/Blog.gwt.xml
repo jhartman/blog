@@ -8,10 +8,15 @@
   <inherits name="com.google.gwt.user.theme.chrome.ChromeResources"/>
   <inherits name="com.google.gwt.user.theme.dark.DarkResources"/>
   <inherits name="com.google.gwt.resources.Resources" />
+  <inherits name="com.google.gwt.logging.Logging"/>
 
+  <inherits name="com.kiouri.sliderbar.SliderBarMVP"/>
   <inherits name="ScalaLibrary"/>
 
   <inherits name="josh.Shared"/>
+
+  <set-property name="gwt.logging.consoleHandler" value="ENABLED"/>
+  <set-property name="gwt.logging.popupHandler" value="DISABLED"/>
 
   <!-- Enable debug ID. -->
   <inherits name="com.google.gwt.user.Debug"/>

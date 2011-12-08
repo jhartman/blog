@@ -4,7 +4,7 @@ package client
 import com.google.gwt.event.logical.shared._
 import com.google.gwt.event.dom.client._
 import com.google.gwt.user.client.rpc.AsyncCallback
-import com.google.gwt.core.client.GWT
+import com.google.gwt.core.client.{RunAsyncCallback, GWT}
 
 /**
 * Provides implicit conversions that allow functions to be substituted where handlers are called for.
@@ -18,6 +18,7 @@ object Handlers extends ChangeHandlers
   with OpenHandlers
   with AsyncCallbackImplicits
   with LoadHandlers
+  with AttachHandlers
 
 trait ChangeHandlers {
   implicit def fn2changeHandler(fn: ChangeEvent => Unit): ChangeHandler =
@@ -34,6 +35,11 @@ trait ChangeHandlers {
 object ChangeHandlers extends ChangeHandlers
 
 trait ClickHandlers {
+  implicit def simpleFn2ClickHandler(fn: => Unit): ClickHandler =
+    new ClickHandler() {
+      def onClick(event: ClickEvent) = fn
+    }
+
   implicit def fn2clickHandler(fn: ClickEvent => Unit): ClickHandler =
     new ClickHandler() {
       def onClick(event: ClickEvent) = fn(event)
@@ -74,6 +80,19 @@ trait KeyDownHandlers {
   }
 }
 object KeyDownHandlers extends KeyDownHandlers
+
+trait AttachHandlers {
+  implicit def fn2AttachHandler(fn: AttachEvent => Unit): AttachEvent.Handler =
+    new AttachEvent.Handler {
+      def onAttachOrDetach(ev: AttachEvent) {fn(ev)}
+    }
+
+  implicit def simpleFn2AttachHandler(fn: => Unit): AttachEvent.Handler =
+    new AttachEvent.Handler {
+      def onAttachOrDetach(ev: AttachEvent) {fn}
+    }
+}
+object AttachHandlers extends AttachHandlers
 
 trait SelectionHandlers {
   implicit def fn2selectionHandler[T](fn: SelectionEvent[T] => Unit): SelectionHandler[T] =
@@ -145,6 +164,18 @@ trait AsyncCallbackImplicits {
         fn(res)
       }
     }
+
+  implicit def fnToRunAsyncCallback(fn: => Unit): RunAsyncCallback = {
+    new RunAsyncCallback {
+      def onSuccess() {
+        fn
+      }
+
+      def onFailure(throwable: Throwable) {
+        GWT.log("Something wrong", throwable)
+      }
+    }
+  }
 }
 object AsyncCallbackImplicits extends AsyncCallbackImplicits
 

@@ -65,20 +65,6 @@
     </java>
   </target>
 
-  <target name="jetty" depends="gwtc" description="Launch jetty server">
-      <java failonerror="true" fork="true" classname="josh.server.LaunchJetty">
-        <classpath>
-          <pathelement location="war/WEB-INF/lib"/>
-          <pathelement location="war/WEB-INF/classes"/>
-
-          <path refid="project.server.class.path"/>
-        </classpath>
-        <jvmarg value="-Xmx2048m"/>
-        <jvmarg value="-server"/>
-      </java>
-    </target>
-
-  
   <taskdef name="scalac-client" classname="scala.tools.ant.Scalac" classpathref="scala.client.class.path"/>
 
   <taskdef name="scalac-server" classname="scala.tools.ant.Scalac" classpathref="scala.server.class.path"/>
@@ -175,7 +161,24 @@
     </java>
   </target>
 
-  <target name="build" depends="gwtc" description="Build this project" />
+    <target name="jetty" description="Launch jetty server">
+        <java failonerror="true" fork="true" classname="josh.server.LaunchJetty">
+            <classpath>
+                <pathelement location="war/WEB-INF/lib"/>
+                <pathelement location="war/WEB-INF/classes"/>
+                <pathelement location="war/WEB-INF/classes-server"/>
+                <pathelement location="war/WEB-INF/classes-shared"/>
+                <pathelement location="war/WEB-INF/jribble-client"/>
+                <pathelement location="war/WEB-INF/jribble-shared"/>
+                <path refid="project.server.class.path"/>
+            </classpath>
+            <jvmarg value="-Xmx2048m"/>
+            <jvmarg value="-server"/>
+        </java>
+    </target>
+
+
+    <target name="build" depends="gwtc" description="Build this project" />
 
   <target name="war" depends="build" description="Create a war file">
     <zip destfile="Hello.war" basedir="war"/>
