@@ -1,0 +1,10 @@
+war/WEB-INF/classes-server/
+war/WEB-INF/classes-shared/
+war/WEB-INF/classes/
+war/WEB-INF/deploy/
+war/WEB-INF/jribble-client/
+war/WEB-INF/jribble-shared/
+war/josh.Blog
+gwt-unitCache/
+.idea/
+
