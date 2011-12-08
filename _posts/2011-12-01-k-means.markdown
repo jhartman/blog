@@ -1,0 +1,39 @@
+---
+layout: blog-post
+title: K-means
+
+excerpt: Simple unsupervised "learning": K-Means
+
+---
+I'd like to show a pretty simple topic and demo. Let's discuss K-means!
+
+Imagine that you have some data points in a 2-d coordinate space, and let's say that you
+want to partition the data into K clusters that would give a reasonable representation of
+data that's close together. K-means is a very simple algorithm to do just that.
+
+Here are the steps to do it:
+Initialize: Assign each data point to a random cluster from [0,K)
+Iterate:
+1. Calculate the "mean" point for each cluster, using all the data points in that cluster. For 2d-space, this is the average of all
+X and Y points in the cluster
+2. For each data point, find the closest cluster. Assign the data point to that cluster for the next iteration.
+
+K-means is extensible to other vector spaces than just a 2d coordinate plane. Each datapoint can be a tuple of as many
+features as you like. It can be used for clustering documents for search or learning purposes. For that problem,
+the features may be the top 50 TF-IDF term ids in the document. There's no reason you couldn't put in other features
+like document length or the Page Rank of the document, and weight them as you desire.
+
+The example I want to show, because it's so compelling, is a computer vision application. K-means can be used
+to segment images. Imagine that each pixel in the image is a data point with 5 features
+1. X-coordinate
+2. Y-coordinate
+3. Red value
+4. Blue value
+5. Green value
+
+Great candidates for image segmentation are color or color + distance. Check out the interactive example below!
+Let me first give you fair warning: This will run in your browser, and it will take a while. I _strongly_ suggest
+using Google Chrome for this demo.
+
+<script type="text/javascript" language="javascript" src="josh.Blog/josh.Blog.nocache.js"></script>
+<div id="kmeans"/>
