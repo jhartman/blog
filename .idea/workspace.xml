@@ -2,23 +2,135 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3db67fb4-7391-4db9-a3af-5d94d5e47139" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/josh/client/KMeansView.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shared/src/josh/shared/KMeans2.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shared/src/josh/shared/util/Utils.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/00E15E5B06EA60DA9C7F7AE2CCD356E8.cache.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/5BDD746F694B338607BA53529402C419.cache.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/5DF4BFCED98395B5F4C2B3134070C08D.cache.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/E433951CD8670727BF2F2440145B4D54.cache.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/E67C92EB0B55CA71A7A1F3A2FC852608.cache.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/FAD01D165B52068698763AACD13A376B.cache.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/clear.cache.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/chrome/images/corner.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/chrome/images/corner_ie6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/chrome/images/hborder.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/chrome/images/hborder_ie6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/chrome/images/ie6/corner_dialog_topleft.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/chrome/images/ie6/corner_dialog_topright.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/chrome/images/ie6/hborder_blue_shadow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/chrome/images/ie6/hborder_gray_shadow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/chrome/images/ie6/vborder_blue_shadow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/chrome/images/ie6/vborder_gray_shadow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/chrome/images/splitPanelThumb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/chrome/images/vborder.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/chrome/images/vborder_ie6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/dark/images/corner.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/dark/images/corner_ie6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/dark/images/hborder.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/dark/images/hborder_ie6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/dark/images/ie6/corner_dialog_topleft.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/dark/images/ie6/corner_dialog_topright.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/dark/images/ie6/hborder_blue_shadow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/dark/images/ie6/hborder_gray_shadow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/dark/images/ie6/vborder_blue_shadow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/dark/images/ie6/vborder_gray_shadow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/dark/images/splitPanelThumb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/dark/images/vborder.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/dark/images/vborder_ie6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/standard/images/corner.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/standard/images/corner_ie6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/standard/images/hborder.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/standard/images/hborder_ie6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/standard/images/ie6/corner_dialog_topleft.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/standard/images/ie6/corner_dialog_topright.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/standard/images/ie6/hborder_blue_shadow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/standard/images/ie6/hborder_gray_shadow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/standard/images/ie6/vborder_blue_shadow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/standard/images/ie6/vborder_gray_shadow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/standard/images/splitPanelThumb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/standard/images/vborder.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/standard/images/vborder_ie6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/files/css/feed-icon-14x14.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/files/css/feed-icon-28x28.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/files/css/grid.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/files/css/icon_pdf.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/files/css/rings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/files/css/vert_grad.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/images/rss.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/28928B0747605BA04ABD036F7768429B.cache.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/755017CDFBC612373BBCEDBB20294053.cache.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/8B36B3D1306933EC622BED37A4C062A8.cache.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/AA5ACF0F6D23158516A7A651C3CE3D9B.cache.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/E89C18BB4515091B0DE614AD1B35F16E.cache.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/E9FDF282C7583585A865779A0FE9020D.cache.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/blogapps.nocache.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/chrome/chrome.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/chrome/chrome_rtl.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/dark/dark.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/dark/dark_rtl.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/standard/standard.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/gwt/standard/standard_rtl.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/blogapps/hosted.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/files/css/js-kit.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/files/css/screen.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/files/css/syntax.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/files/files.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/files/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/first-post.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/includes/includes.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/k-means.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_scripts/transfer_urls.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/code/Plain Text Wiki.tmbundle.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/code/acrp/controlP5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/code/acrp/core.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/code/acrp/index.markdown" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/code/acrp/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/code/acrp/opencsv.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/code/acrp/vis.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/code/feedbag.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/code/siroc/PlotView.pde" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/code/siroc/batikfont.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/code/siroc/controlP5.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/code/siroc/core.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/code/siroc/geomerative.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/code/siroc/geovex.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/code/siroc/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/code/siroc/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/code/siroc/siroc.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/code/siroc/siroc.pde" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files/js/lastfm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ada.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/figures/acrp-main.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/figures/acrp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/figures/all_libraries.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/figures/cjug-overview.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/figures/high-dim-2d.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/figures/high-dim-3d.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/figures/jensen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/figures/properloss.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/figures/siroc-screenshot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/figures/web-traffic.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/research.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/xkcd-correlation.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/info/index.markdown" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/info/site.markdown" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/Blog.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/WEB-INF/lib/gwt-servlet.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/war/WEB-INF/lib/scala-library.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/default.html" afterPath="$PROJECT_DIR$/_layouts/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2011-12-01-k-means.markdown" afterPath="$PROJECT_DIR$/_posts/2011-12-01-k-means.markdown" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog.iml" afterPath="$PROJECT_DIR$/blog.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/josh/Blog.gwt.xml" afterPath="$PROJECT_DIR$/client/src/josh/Blog.gwt.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/josh/client/BlogApp.scala" afterPath="$PROJECT_DIR$/client/src/josh/client/BlogApp.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/josh/client/BlogResources.scala" afterPath="$PROJECT_DIR$/client/src/josh/client/BlogResources.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/josh/client/Handlers.scala" afterPath="$PROJECT_DIR$/client/src/josh/client/Handlers.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/josh/client/LoadImageClient.scala" afterPath="$PROJECT_DIR$/client/src/josh/client/LoadImageClient.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/josh/client/BlogEntry.java" afterPath="$PROJECT_DIR$/client/src/josh/client/BlogEntry.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/josh/client/KMeansView.scala" afterPath="$PROJECT_DIR$/client/src/josh/client/KMeansView.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/josh/client/MyImageView.scala" afterPath="$PROJECT_DIR$/client/src/josh/client/MyImageView.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/josh/shared/ImageKMeans.scala" afterPath="$PROJECT_DIR$/shared/src/josh/shared/ImageKMeans.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/josh/shared/KMeans.scala" afterPath="$PROJECT_DIR$/shared/src/josh/shared/KMeans.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/josh/shared/util/ClientLogger.scala" afterPath="$PROJECT_DIR$/shared/src/josh/shared/util/ClientLogger.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/josh/shared/util/Logger.scala" afterPath="$PROJECT_DIR$/shared/src/josh/shared/util/Logger.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/josh/shared/util/Logging.scala" afterPath="$PROJECT_DIR$/shared/src/josh/shared/util/Logging.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/src/josh/shared/util/ServerLogger.scala" afterPath="$PROJECT_DIR$/shared/src/josh/shared/util/ServerLogger.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/Blog.html" afterPath="$PROJECT_DIR$/war/Blog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/css/screen.css" afterPath="$PROJECT_DIR$/files/css/screen.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/war/WEB-INF/web.xml" />
     </list>
     <ignored path="orgchart.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,7 +173,6 @@
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
-    <option name="REVERSE_PATCH" value="false" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
@@ -131,8 +242,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="exception_breakpoints_groupByClasses" value="true" />
+      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -141,19 +252,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BlogApp.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/josh/client/BlogApp.scala">
+      <file leaf-file-name="build.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="53" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0">
+            <state line="180" column="27" selection-start="7353" selection-end="7353" vertical-scroll-proportion="0.33282906">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.xml">
+      <file leaf-file-name="_config.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="169" column="31" selection-start="7099" selection-end="7099" vertical-scroll-proportion="0.0">
+            <state line="1" column="19" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -162,61 +273,16 @@
       <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/war/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="8" column="23" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Blog.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/war/Blog.html">
+      <file leaf-file-name="Blog.gwt.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/josh/Blog.gwt.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="20" selection-start="629" selection-end="629" vertical-scroll-proportion="0.35036495">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KMeansView.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/josh/client/KMeansView.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Handlers.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/josh/client/Handlers.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="21" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AttachEvent.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/gwt/gwt-user.jar!/com/google/gwt/event/logical/shared/AttachEvent.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="13" selection-start="173" selection-end="173" vertical-scroll-proportion="-2.88">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageKMeans.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shared/src/josh/shared/ImageKMeans.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="6" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KMeans2.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shared/src/josh/shared/KMeans2.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="114" selection-start="2575" selection-end="2575" vertical-scroll-proportion="-26.50909">
+            <state line="25" column="17" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -236,28 +302,33 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/shared/src/josh/shared/util/Logging.scala" />
-        <option value="$PROJECT_DIR$/client/src/josh/client/widgets/LoadingWidget.scala" />
-        <option value="$PROJECT_DIR$/client/src/josh/client/BlogResources.scala" />
-        <option value="$PROJECT_DIR$/shared/src/josh/shared/KMeans.scala" />
-        <option value="$PROJECT_DIR$/client/src/josh/Blog.gwt.xml" />
-        <option value="$PROJECT_DIR$/client/src/josh/client/EventQueue.scala" />
-        <option value="$PROJECT_DIR$/shared/src/josh/shared/util/Utils.scala" />
-        <option value="$PROJECT_DIR$/client/src/josh/client/LoadImageClient.scala" />
-        <option value="$PROJECT_DIR$/client/src/josh/client/MyImageView.scala" />
         <option value="$PROJECT_DIR$/shared/src/josh/shared/KMeans2.scala" />
         <option value="$PROJECT_DIR$/shared/src/josh/shared/ImageKMeans.scala" />
-        <option value="$PROJECT_DIR$/client/src/josh/client/KMeansView.scala" />
         <option value="$PROJECT_DIR$/client/src/josh/client/Handlers.scala" />
-        <option value="$PROJECT_DIR$/client/src/josh/client/BlogApp.scala" />
-        <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/war/Blog.html" />
+        <option value="$PROJECT_DIR$/client/src/josh/client/BlogEntry.java" />
+        <option value="$PROJECT_DIR$/client/src/josh/client/MyImageView.scala" />
+        <option value="$PROJECT_DIR$/client/src/josh/client/BlogApp.scala" />
+        <option value="$PROJECT_DIR$/client/src/josh/client/KMeansView.scala" />
+        <option value="$PROJECT_DIR$/files/css/screen.css" />
+        <option value="$PROJECT_DIR$/war/index.html" />
+        <option value="$PROJECT_DIR$/war/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/_layouts/default.html" />
+        <option value="$PROJECT_DIR$/client/src/josh/Blog.gwt.xml" />
+        <option value="$PROJECT_DIR$/_posts/2011-12-01-k-means.markdown" />
+        <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/build.xml" />
       </list>
     </option>
   </component>
   <component name="ModuleEditorState">
     <option name="LAST_EDITED_MODULE_NAME" />
     <option name="LAST_EDITED_TAB_NAME" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="22" />
+    <option name="width" value="1628" />
+    <option name="height" value="1028" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -285,6 +356,17 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orgchart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -303,52 +385,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="orgchart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="war" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="orgchart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="war" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="orgchart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Favorites" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -366,9 +405,9 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -461,6 +500,20 @@
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="SBT.BeforeRunTask" enabled="false" runInCurrentModule="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="SBT.BeforeRunTask" enabled="false" runInCurrentModule="false" />
       </method>
     </configuration>
     <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
@@ -475,18 +528,7 @@
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="SBT.BeforeRunTask" enabled="false" runInCurrentModule="false" />
       </method>
     </configuration>
     <configuration default="true" type="SpecsRunConfiguration" factoryName="Specs">
@@ -503,6 +545,7 @@
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="SBT.BeforeRunTask" enabled="false" runInCurrentModule="false" />
       </method>
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -521,6 +564,7 @@
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="SBT.BeforeRunTask" enabled="false" runInCurrentModule="false" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -540,6 +584,7 @@
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="SBT.BeforeRunTask" enabled="false" runInCurrentModule="false" />
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -565,6 +610,7 @@
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="SBT.BeforeRunTask" enabled="false" runInCurrentModule="false" />
       </method>
     </configuration>
     <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
@@ -574,11 +620,15 @@
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="SBT.BeforeRunTask" enabled="false" runInCurrentModule="false" />
       </method>
     </configuration>
     <configuration default="false" name="FSC" type="ScalaCompilationServerRunConfiguration" factoryName="Scala Compilation Server">
@@ -664,25 +714,31 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3956044" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Compare Directories" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22882289" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.052805282" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1912088" sideWeight="0.0" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24572514" sideWeight="0.9010989" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23481013" sideWeight="0.7711771" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3340471" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0989011" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Compare Directories" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JSON Formatter" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24952501" sideWeight="0.65824175" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
@@ -708,6 +764,12 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="LAST_COMMIT_MESSAGE" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
@@ -731,106 +793,86 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/lib/gwt/gwt-slider-bar-1.0.jar!/com/kiouri/sliderbar/client/solution/simplehorizontal/SliderBarSimpleHorizontal.class">
+    <entry file="file://$PROJECT_DIR$/server/src/josh/server/LaunchJetty.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="11" selection-start="420" selection-end="420" vertical-scroll-proportion="-5.04" />
+        <state line="5" column="7" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/gwt/gwt-user.jar!/com/google/gwt/user/client/ui/VerticalPanel.class">
+    <entry file="file://$PROJECT_DIR$/_scripts/import_comments.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="16" selection-start="620" selection-end="620" vertical-scroll-proportion="-7.2" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/gwt/gwt-user.jar!/com/google/gwt/user/client/ui/Button.class">
+    <entry file="file://$PROJECT_DIR$/files/css/screen.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="11" selection-start="515" selection-end="515" vertical-scroll-proportion="-7.12" />
+        <state line="3" column="11" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/josh/client/EventQueue.scala">
+    <entry file="file://$PROJECT_DIR$/_includes/nav-blog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="10" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/josh/client/LoadImageClient.scala">
+    <entry file="file://$PROJECT_DIR$/_includes/nav-name.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="76" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shared/src/josh/shared/util/Utils.scala">
+    <entry file="file://$PROJECT_DIR$/_includes/nav-note.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="1624" selection-end="1624" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/josh/client/MyImageView.scala">
+    <entry file="file://$PROJECT_DIR$/_includes/nav-sap.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="38" selection-start="1084" selection-end="1084" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shared/src/josh/shared/KMeans2.scala">
+    <entry file="file://$PROJECT_DIR$/_layouts/blog-post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="114" selection-start="2575" selection-end="2575" vertical-scroll-proportion="-26.50909">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/gwt/gwt-user.jar!/com/google/gwt/event/logical/shared/AttachEvent.class">
+    <entry file="file://$PROJECT_DIR$/_layouts/blog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="173" selection-end="173" vertical-scroll-proportion="-2.88">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/josh/client/Handlers.scala">
+    <entry file="file://$PROJECT_DIR$/_layouts/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="21" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="83" column="47" selection-start="3016" selection-end="3016" vertical-scroll-proportion="-57.46154" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shared/src/josh/shared/ImageKMeans.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="6" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/images/rss.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/josh/client/KMeansView.scala">
+    <entry file="file://$PROJECT_DIR$/_posts/2011-12-01-k-means.markdown">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="3" column="25" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/josh/client/BlogApp.scala">
+    <entry file="file://$PROJECT_DIR$/war/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="53" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0">
+        <state line="8" column="23" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/josh/Blog.gwt.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="17" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="19" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="31" selection-start="7099" selection-end="7099" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/Blog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="20" selection-start="629" selection-end="629" vertical-scroll-proportion="0.35036495">
+        <state line="180" column="27" selection-start="7353" selection-end="7353" vertical-scroll-proportion="0.33282906">
           <folding />
         </state>
       </provider>

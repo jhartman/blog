@@ -12,13 +12,18 @@ case class KMeansModel(cdWeight: Double, k: Int)
 class KMeansView(model: KMeansModel) extends Composite with Logging {
   val kBox = new TextBox
   kBox.setText(model.k.toString)
+  kBox.setStyleName("jInput")
 
   val slider = new SliderBarSimpleHorizontal(10, "50", false)
+  slider.setStyleName("jInput")
 
   val kText = new Label("K")
-  val sliderText = new Label("Color vs Distance")
+  kText.setStyleName("jInput")
 
-  val table = new Grid(4, 4)
+  val sliderText = new Label("Color vs Distance")
+  sliderText.setStyleName("jInput")
+
+  val table = new Grid(2, 2)
   table.setWidget(0, 0, kText)
   table.setWidget(0, 1, kBox)
   table.setWidget(1, 0, sliderText)
@@ -28,6 +33,7 @@ class KMeansView(model: KMeansModel) extends Composite with Logging {
   vp.add(table)
 
   val button = new Button("Run", apply())
+  button.setStyleName("jInput")
   vp.add(button)
 
   slider.addAttachHandler(slider.setDragPosition((model.cdWeight * slider.getAbsMaxLength).toInt))

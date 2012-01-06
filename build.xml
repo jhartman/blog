@@ -14,7 +14,7 @@
   </path>
 
   <path id="scala.server.class.path">
-    <fileset dir="/Users/jhartman/lib/scala-2.9.1.final/lib/">
+    <fileset dir="lib/scala-standard/">
       <include name="scala-compiler.jar"/>
       <include name="scala-library.jar"/>
     </fileset>
@@ -33,10 +33,10 @@
     <fileset dir="lib/gwt" includes="*.jar"/>
     <!-- Add any additional non-server libs (such as JUnit) -->
     <fileset dir="war/WEB-INF/lib" includes="**/*.jar"/>
-    <fileset dir="/Users/jhartman/lib/scala-2.9.1.final/lib/">
+    <fileset dir="lib/scala-standard">
       <include name="scala-library.jar"/>
     </fileset>
-    <fileset dir="/Users/jhartman/Apps/jetty-distribution-7.5.4.v20111024/lib" includes="*.jar"/>
+    <fileset dir="lib/jetty" includes="*.jar"/>
   </path>
 
   <target name="libs" description="Copy libs to WEB-INF/lib">
@@ -47,8 +47,8 @@
   <target name="gwtc" depends="scalac-client, scalac-server" description="GWT compile to JavaScript">
     <java failonerror="true" fork="true" classname="com.google.gwt.dev.Compiler">
       <classpath>
-        <pathelement location="war/WEB-INF/jribble-shared"/>
-        <pathelement location="war/WEB-INF/jribble-client"/>
+        <pathelement location="/tmp/jribble-shared"/>
+        <pathelement location="/tmp/jribble-client"/>
         <pathelement location="shared/src"/>
         <pathelement location="client/src"/>
         <pathelement location="client/src/josh/client"/>
@@ -70,31 +70,29 @@
   <taskdef name="scalac-server" classname="scala.tools.ant.Scalac" classpathref="scala.server.class.path"/>
 
   <target name="scalac-client" description="Scalac compile to jribble">
-    <mkdir dir="war/WEB-INF/jribble-client"/>
-    <mkdir dir="war/WEB-INF/jribble-shared"/>
+    <mkdir dir="/tmp/jribble-client"/>
+    <mkdir dir="/tmp/jribble-shared"/>
 
-    <scalac-client srcdir="shared/src" destdir="war/WEB-INF/jribble-shared" target="jribble" addparams="${scala.args}">
+    <scalac-client srcdir="shared/src" destdir="/tmp/jribble-shared" target="jribble" addparams="${scala.args}">
       <include name="**/*.scala"/>
       <include name="**/*.java"/>
       <classpath refid="project.client.class.path"/>
     </scalac-client>
 
-    <mkdir dir="war/WEB-INF/classes-shared"/>
-    <mkdir dir="war/WEB-INF/classes"/>
-    <javac srcdir="shared/src" destdir="war/WEB-INF/classes-shared">
+    <javac srcdir="shared/src" destdir="/tmp/jribble-shared">
       <classpath refid="project.client.class.path"/>
     </javac>
 
-    <scalac-client srcdir="client/src" destdir="war/WEB-INF/jribble-client" target="jribble" addparams="${scala.args}">
+    <scalac-client srcdir="client/src" destdir="/tmp/jribble-client" target="jribble" addparams="${scala.args}">
       <include name="**/*.scala"/>
       <include name="**/*.java"/>
         <classpath>
-          <pathelement location="war/WEB-INF/jribble-shared"/>
+          <pathelement location="/tmp/jribble-shared"/>
           <path refid="project.client.class.path"/>
         </classpath>
     </scalac-client>
 
-     <javac srcdir="client/src" destdir="war/WEB-INF/jribble-client">
+     <javac srcdir="client/src" destdir="/tmp/jribble-client">
          <classpath>
            <pathelement location="war/WEB-INF/jribble-shared"/>
            <pathelement location="war/WEB-INF/jribble-client"/>
@@ -157,7 +155,7 @@
       <arg value="-startupUrl"/>
       <arg value="Blog.html"/>
       <arg line="${gwt.dev.args}"/>
-      <arg value="josh.Blog"/>
+      <arg value="blogapps"/>
     </java>
   </target>
 
@@ -177,6 +175,12 @@
         </java>
     </target>
 
+    <target name="jekyll" description="Compile blog">
+        <exec executable="jekyll">
+        </exec>
+        <copydir src="/tmp/md-cache" dest="war"/>
+    </target>
+
 
     <target name="build" depends="gwtc" description="Build this project" />
 
@@ -185,6 +189,10 @@
   </target>
 
   <target name="clean" description="Cleans this project">
+    <delete dir="war/files" failonerror="false" />
+    <delete dir="war/images" failonerror="false" />
+    <delete dir="war/includes" failonerror="false" />
+
     <delete dir="war/WEB-INF/classes-shared" failonerror="false" />
     <delete dir="war/WEB-INF/classes-server" failonerror="false" />
     <delete dir="war/WEB-INF/classes" failonerror="false" />
@@ -198,7 +206,7 @@
     <delete dir="gwt-unitCache" failonerror="false" />
     <delete dir="jribbleCache" failonerror="false" />
     <delete dir="war/jribbleCache" failonerror="false" />
-    <delete dir="war/josh.Blog" failonerror="false" />
+    <delete dir="war/blogapps" failonerror="false" />
     <delete file="Blog.war"/>
   </target>
 

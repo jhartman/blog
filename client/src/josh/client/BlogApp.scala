@@ -17,12 +17,15 @@ class BlogApp {
 
   def interact(panel: Panel) {
     val img = new GwtImage(resources.lena256().getURL);
+    img.setStyleName("kmeansImage")
     val imagePanel = new HorizontalPanel
+    imagePanel.setWidth("100%")
     imagePanel.add(img)
 
     val controls = new KMeansView(KMeansModel(0.15, 8))
 
     val outerPanel = new VerticalPanel
+    outerPanel.setWidth("100%")
     outerPanel.add(imagePanel)
     outerPanel.add(controls)
 

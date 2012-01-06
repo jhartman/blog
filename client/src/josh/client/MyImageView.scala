@@ -13,6 +13,7 @@ class MyImageView(width: Int, height: Int, pixels: Iterable[MyPixel]) extends Co
 
   private def load(width: Int, height: Int, pixels: Iterable[MyPixel]): Canvas = {
     val canvas = Canvas.createIfSupported()
+    canvas.setStyleName("kmeansImage")
     canvas.setCoordinateSpaceHeight(height)
     canvas.setCoordinateSpaceWidth(width)
     val context = canvas.getContext2d

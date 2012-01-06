@@ -1,10 +1,11 @@
 ---
-destination : /Users/jhartman/Sites/blog
+destination : /tmp/md-cache
 auto        : false
 lsi         : false
 pygments    : true
 permalink   : none
 markdown    : maruku
+exclude     : client,gwt-unitCache,server,shared,scripts,war,.idea,build.xml,lib,blog.iml,md-cache
 
 maruku:
     use_divs: true

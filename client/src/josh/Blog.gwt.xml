@@ -1,4 +1,4 @@
-<module>
+<module rename-to="blogapps">
   <!-- Inherit the core Web Toolkit stuff. -->
   <inherits name="com.google.gwt.core.Core"/>
   <inherits name='com.google.gwt.user.User'/>
@@ -27,4 +27,6 @@
 
   <!-- Specify the app entry point class. -->
   <entry-point class="josh.client.BlogEntry"/>
+
+
 </module>

@@ -5,6 +5,6 @@ import com.google.gwt.user.client.ui.RootPanel;
 
 public class BlogEntry implements EntryPoint {
     public void onModuleLoad() {
-      new josh.client.BlogApp().interact(RootPanel.get());
+      new josh.client.BlogApp().interact(RootPanel.get("kmeans"));
     }
 }
