@@ -62,7 +62,6 @@ object ImageKMeans extends Logging {
       val gd = colorToFloat(p1.color.G) - colorToFloat(p2.color.G)
       val inner = rd*rd + bd*bd + gd*gd
 
-//      math.sqrt(inner)
       inner
     } catch {
       case ex: Exception =>
@@ -85,22 +84,26 @@ object ImageKMeans extends Logging {
     cdWeight * euclideanDistance(rowToFloat)(colToFloat)(p1, p2)
   }
 
-  def average(pixels: Iterable[MyPixel]): MyPixel = {
-    val newColors = pixels.map(_.color.toSeq).foldLeft(Seq(0, 0, 0)) { case (total, c) =>
-      total.zip(c).map { case (a, b) => a + b }
-    }.map(c => c / pixels.size)
-    val nr = pixels.map(_.row).sum / pixels.size
-    val nc = pixels.map(_.col).sum / pixels.size
+  def average(pixels: Array[MyPixel]): MyPixel = {
+    var accum = Seq(0, 0, 0)
+    var i = 0
+    var nr = 0
+    var nc = 0
+    while(i < pixels.size) {
+      accum = accum.zip(pixels(i).color.toSeq).map { case (a, b) => a + b }
+      nr += pixels(i).row
+      nc += pixels(i).col
+      i += 1
+    }
 
-    MyPixel(nr, nc, Color(newColors))
+    nr = nr / pixels.size
+    nc = nc / pixels.size
+    accum = accum.map(_ / pixels.size)
+
+    MyPixel(nr, nc, Color(accum))
   }
 
-  // Normalize everything to 0-1
   def colorToFloat(color: Int) = color / 255.0
-
-//  def apply(pixels: Map[MyPixel, MyPixel], K: Int, width: Int, height: Int): Map[MyPixel, MyPixel] = {
-//    KMeans(pixels)(colorDistance)(average)
-//  }
 
   def buildDistanceFn(width: Int, height: Int, cdWeight: Double): (MyPixel, MyPixel) => Double = {
     def rowToFloat(row: Int) = row.toDouble / height

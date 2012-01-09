@@ -5,7 +5,7 @@ lsi         : false
 pygments    : true
 permalink   : none
 markdown    : maruku
-exclude     : client,gwt-unitCache,server,shared,scripts,war,.idea,build.xml,lib,blog.iml,md-cache
+exclude     : client,gwt-unitCache,server,shared,scripts,war,.idea,build.xml,lib,blog.iml,md-cache,logs,progess
 
 maruku:
     use_divs: true

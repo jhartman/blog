@@ -55,7 +55,7 @@ object KMeans2 extends Logging {
 
   def apply[T : ClassManifest](data: Array[T], clustering: (Array[T], Array[Int]))
                               (distanceFn: (T, T) => Double)
-                              (buildMean: Iterable[T] => T): (Array[T], Array[Int]) = {
+                              (buildMean: Array[T] => T): (Array[T], Array[Int]) = {
 
     val newClustering = cluster(data, clustering._1, distanceFn)
     var i = 0
@@ -72,7 +72,7 @@ object KMeans2 extends Logging {
     }
 
     val newClusters = grouped.map { case (idx, vectors) =>
-      val newMean = buildMean(vectors)
+      val newMean = buildMean(vectors.toArray)
       (idx, newMean)
     }.toMap
 

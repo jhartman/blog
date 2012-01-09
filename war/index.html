@@ -9,7 +9,15 @@
 
    <link rel="start" href="/" />
 
+    <!-- Update your html tag to include the itemscope and itemtype attributes -->
+    <html itemscope itemtype="http://schema.org/Blog">
+
+    <!-- Add the following three tags inside head -->
+    <meta itemprop="name" content="Home ">
+    <meta itemprop="description" content="Blog post by Joshua Hartman about big data">
+
 	
+
 	
 	
 
@@ -77,10 +85,22 @@
 
 
 
+    <!-- Place this tag where you want the +1 button to render -->
+    <g:plusone></g:plusone>
+
+    <!-- Place this render call where appropriate -->
+    <script type="text/javascript">
+        (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+
   <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'example'; // required: replace example with your forum shortname
+        var disqus_shortname = 'hartmanster';
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {

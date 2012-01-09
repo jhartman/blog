@@ -9,7 +9,15 @@
 
    <link rel="start" href="/" />
 
+    <!-- Update your html tag to include the itemscope and itemtype attributes -->
+    <html itemscope itemtype="http://schema.org/Blog">
+
+    <!-- Add the following three tags inside head -->
+    <meta itemprop="name" content="K-means ">
+    <meta itemprop="description" content="Blog post by Joshua Hartman about big data">
+
 	
+
 	
 	
   	<link rel="alternate" type="application/atom+xml" href="atom.xml" title="RSS feed" />
@@ -86,8 +94,67 @@
 <li>Green value</li>
 </ol>
 
-<p>Great candidates for image segmentation are color or color + distance. Check out the interactive example below! Let me first give you fair warning: This will run in your browser, and it will take a while. I <em>strongly</em> suggest using Google Chrome for this demo. <div id='kmeans'>
+<p>Great candidates for image segmentation are color or color + distance from some median point. Check out the demo below! Note that k-means does not necessarily converge to a global optimum. The output depends on the randomly generated initial configuration. I&#8217;d suggest giving it a few tries so you can see what you get.</p>
+
+<p>Let me first give you fair warning: This will run in your browser, and it will take a while. I <em>strongly</em> suggest using Google Chrome for this demo. <div id='kmeans'>
 </div></p>
+
+<p>I want to give a shoutout to the incredible <a href='http://scalagwt.github.com/'>scala-gwt</a> project. You&#8217;re running Scala in your browser when you run the demo! I had to &#8220;optimize&#8221; the Scala code due to Scala&#8217;s implementation of closures to get it to run fast enough for Google Chrome, but it&#8217;s more or less what&#8217;s running. If you&#8217;re interested in the full thing, please check out the <a href='https://github.com/jhartman/blog'>source-code</a>. I&#8217;m going to give you a fair warning. I put in a bunch of jars so the repo is huge.</p>
+<div class='highlight'><pre><code class='scala'><span class='k'>object</span> <span class='nc'>KMeans</span> <span class='k'>extends</span> <span class='nc'>Logging</span> <span class='o'>{</span>
+  <span class='k'>val</span> <span class='n'>numIters</span> <span class='k'>=</span> <span class='mi'>10</span>
+
+  <span class='k'>def</span> <span class='n'>createStartingVectors</span><span class='o'>[</span><span class='kt'>T</span> <span class='kt'>:</span> <span class='kt'>ClassManifest</span><span class='o'>](</span><span class='n'>data</span><span class='k'>:</span> <span class='kt'>Array</span><span class='o'>[</span><span class='kt'>T</span><span class='o'>],</span> <span class='n'>K</span><span class='k'>:</span> <span class='kt'>Int</span><span class='o'>,</span> <span class='n'>random</span><span class='k'>:</span> <span class='kt'>Random</span><span class='o'>)</span><span class='k'>:</span> <span class='kt'>Array</span><span class='o'>[</span><span class='kt'>T</span><span class='o'>]</span> <span class='k'>=</span> <span class='o'>{</span>
+    <span class='k'>if</span> <span class='o'>(</span><span class='n'>K</span> <span class='o'>&lt;</span> <span class='n'>data</span><span class='o'>.</span><span class='n'>size</span><span class='o'>)</span> <span class='o'>{</span>
+      <span class='k'>val</span> <span class='n'>indexes</span> <span class='k'>=</span> <span class='n'>scala</span><span class='o'>.</span><span class='n'>collection</span><span class='o'>.</span><span class='n'>mutable</span><span class='o'>.</span><span class='nc'>Set</span><span class='o'>.</span><span class='n'>empty</span><span class='o'>[</span><span class='kt'>Int</span><span class='o'>]</span>
+      <span class='k'>while</span><span class='o'>(</span><span class='n'>indexes</span><span class='o'>.</span><span class='n'>size</span> <span class='o'>&lt;</span> <span class='n'>K</span><span class='o'>)</span> <span class='o'>{</span>
+        <span class='k'>val</span> <span class='n'>next</span> <span class='k'>=</span> <span class='n'>random</span><span class='o'>.</span><span class='n'>nextInt</span><span class='o'>(</span><span class='n'>data</span><span class='o'>.</span><span class='n'>size</span> <span class='o'>-</span> <span class='mi'>1</span><span class='o'>)</span>
+        <span class='n'>indexes</span> <span class='o'>+=</span> <span class='n'>next</span>
+      <span class='o'>}</span>
+
+      <span class='n'>indexes</span><span class='o'>.</span><span class='n'>map</span> <span class='o'>{</span> <span class='n'>idx</span> <span class='k'>=&gt;</span> <span class='n'>data</span><span class='o'>(</span><span class='n'>idx</span><span class='o'>)</span> <span class='o'>}.</span><span class='n'>toArray</span>
+    <span class='o'>}</span> <span class='k'>else</span> <span class='k'>throw</span> <span class='k'>new</span> <span class='nc'>IllegalArgumentException</span>
+  <span class='o'>}</span>
+
+  <span class='k'>def</span> <span class='n'>cluster</span><span class='o'>[</span><span class='kt'>T:</span> <span class='kt'>ClassManifest</span><span class='o'>](</span><span class='n'>data</span><span class='k'>:</span> <span class='kt'>Iterable</span><span class='o'>[</span><span class='kt'>T</span><span class='o'>],</span> <span class='n'>clusters</span><span class='k'>:</span> <span class='kt'>Array</span><span class='o'>[</span><span class='kt'>T</span><span class='o'>],</span> <span class='n'>distanceFn</span><span class='k'>:</span> <span class='o'>(</span><span class='kt'>T</span><span class='o'>,</span> <span class='kt'>T</span><span class='o'>)</span> <span class='k'>=&gt;</span> <span class='nc'>Double</span><span class='o'>)</span><span class='k'>:</span> <span class='kt'>Map</span><span class='o'>[</span><span class='kt'>T</span>, <span class='kt'>T</span><span class='o'>]</span> <span class='k'>=</span> <span class='o'>{</span>
+    <span class='k'>var</span> <span class='n'>i</span> <span class='k'>=</span> <span class='mi'>0</span>
+    <span class='k'>val</span> <span class='n'>mapping</span> <span class='k'>=</span> <span class='n'>data</span><span class='o'>.</span><span class='n'>map</span> <span class='o'>{</span> <span class='n'>dataVector</span> <span class='k'>=&gt;</span>
+      <span class='k'>if</span> <span class='o'>(</span><span class='n'>i</span> <span class='o'>%</span> <span class='mi'>1000</span> <span class='o'>==</span> <span class='mi'>0</span><span class='o'>)</span> <span class='n'>log</span><span class='o'>.</span><span class='n'>info</span><span class='o'>(</span><span class='n'>i</span> <span class='o'>+</span> <span class='s'>&quot; points clustered&quot;</span><span class='o'>)</span>
+      <span class='k'>val</span> <span class='o'>(</span><span class='n'>dist</span><span class='o'>,</span> <span class='n'>closest</span><span class='o'>)</span> <span class='k'>=</span> <span class='n'>clusters</span><span class='o'>.</span><span class='n'>foldLeft</span><span class='o'>((</span><span class='nc'>Double</span><span class='o'>.</span><span class='nc'>MaxValue</span><span class='o'>,</span> <span class='n'>clusters</span><span class='o'>.</span><span class='n'>head</span><span class='o'>))</span> <span class='o'>{</span> <span class='k'>case</span> <span class='o'>((</span><span class='n'>min</span><span class='o'>,</span> <span class='n'>c</span><span class='o'>),</span> <span class='n'>cluster</span><span class='o'>)</span> <span class='k'>=&gt;</span>
+        <span class='k'>val</span> <span class='n'>test</span> <span class='k'>=</span> <span class='n'>distanceFn</span><span class='o'>(</span><span class='n'>dataVector</span><span class='o'>,</span> <span class='n'>cluster</span><span class='o'>)</span>
+        <span class='k'>if</span><span class='o'>(</span><span class='n'>test</span> <span class='o'>&lt;</span> <span class='n'>min</span><span class='o'>)</span> <span class='o'>(</span><span class='n'>test</span><span class='o'>,</span> <span class='n'>cluster</span><span class='o'>)</span> <span class='k'>else</span> <span class='o'>(</span><span class='n'>min</span><span class='o'>,</span> <span class='n'>c</span><span class='o'>)</span>
+      <span class='o'>}</span>
+      <span class='n'>i</span> <span class='o'>+=</span> <span class='mi'>1</span>
+      <span class='o'>(</span><span class='n'>dataVector</span><span class='o'>,</span> <span class='n'>closest</span><span class='o'>)</span>
+    <span class='o'>}</span>
+    <span class='n'>mapping</span><span class='o'>.</span><span class='n'>toMap</span>
+  <span class='o'>}</span>
+
+  <span class='k'>def</span> <span class='n'>apply</span><span class='o'>[</span><span class='kt'>T</span> <span class='kt'>:</span> <span class='kt'>ClassManifest</span><span class='o'>](</span><span class='n'>data</span><span class='k'>:</span> <span class='kt'>Array</span><span class='o'>[</span><span class='kt'>T</span><span class='o'>],</span> <span class='n'>K</span><span class='k'>:</span> <span class='kt'>Int</span><span class='o'>)</span>
+                              <span class='o'>(</span><span class='n'>distanceFn</span><span class='k'>:</span> <span class='o'>(</span><span class='kt'>T</span><span class='o'>,</span> <span class='kt'>T</span><span class='o'>)</span> <span class='k'>=&gt;</span> <span class='nc'>Double</span><span class='o'>)</span>
+                              <span class='o'>(</span><span class='n'>buildMean</span><span class='k'>:</span> <span class='kt'>Iterable</span><span class='o'>[</span><span class='kt'>T</span><span class='o'>]</span> <span class='k'>=&gt;</span> <span class='n'>T</span><span class='o'>)</span><span class='k'>:</span> <span class='kt'>Map</span><span class='o'>[</span><span class='kt'>T</span>, <span class='kt'>T</span><span class='o'>]</span> <span class='k'>=</span> <span class='o'>{</span>
+    <span class='k'>val</span> <span class='n'>initial</span> <span class='k'>=</span> <span class='n'>cluster</span><span class='o'>(</span><span class='n'>data</span><span class='o'>,</span> <span class='n'>createStartingVectors</span><span class='o'>(</span><span class='n'>data</span><span class='o'>,</span> <span class='n'>K</span><span class='o'>,</span> <span class='k'>new</span> <span class='nc'>Random</span><span class='o'>),</span> <span class='n'>distanceFn</span><span class='o'>)</span>
+
+    <span class='o'>(</span><span class='mi'>0</span> <span class='n'>until</span> <span class='n'>numIters</span><span class='o'>).</span><span class='n'>foldLeft</span><span class='o'>(</span><span class='n'>initial</span><span class='o'>)</span> <span class='o'>{</span> <span class='o'>(</span><span class='n'>clusters</span><span class='o'>,</span> <span class='n'>iter</span><span class='o'>)</span> <span class='k'>=&gt;</span>
+      <span class='n'>apply</span><span class='o'>(</span><span class='n'>clusters</span><span class='o'>)(</span><span class='n'>distanceFn</span><span class='o'>)(</span><span class='n'>buildMean</span><span class='o'>)</span>
+    <span class='o'>}</span>
+  <span class='o'>}</span>
+
+  <span class='k'>def</span> <span class='n'>apply</span><span class='o'>[</span><span class='kt'>T</span> <span class='kt'>:</span> <span class='kt'>ClassManifest</span><span class='o'>](</span><span class='n'>data</span><span class='k'>:</span> <span class='kt'>Map</span><span class='o'>[</span><span class='kt'>T</span>, <span class='kt'>T</span><span class='o'>])</span>
+                              <span class='o'>(</span><span class='n'>distanceFn</span><span class='k'>:</span> <span class='o'>(</span><span class='kt'>T</span><span class='o'>,</span> <span class='kt'>T</span><span class='o'>)</span> <span class='k'>=&gt;</span> <span class='nc'>Double</span><span class='o'>)</span>
+                              <span class='o'>(</span><span class='n'>buildMean</span><span class='k'>:</span> <span class='kt'>Iterable</span><span class='o'>[</span><span class='kt'>T</span><span class='o'>]</span> <span class='k'>=&gt;</span> <span class='n'>T</span><span class='o'>)</span><span class='k'>:</span> <span class='kt'>Map</span><span class='o'>[</span><span class='kt'>T</span>, <span class='kt'>T</span><span class='o'>]</span> <span class='k'>=</span> <span class='o'>{</span>
+
+    <span class='k'>val</span> <span class='n'>clustering</span> <span class='k'>=</span> <span class='n'>cluster</span><span class='o'>(</span><span class='n'>data</span><span class='o'>.</span><span class='n'>keys</span><span class='o'>,</span> <span class='n'>data</span><span class='o'>.</span><span class='n'>values</span><span class='o'>.</span><span class='n'>toArray</span><span class='o'>.</span><span class='n'>toSet</span><span class='o'>.</span><span class='n'>toArray</span><span class='o'>,</span> <span class='n'>distanceFn</span><span class='o'>)</span>
+    <span class='k'>val</span> <span class='n'>inversion</span> <span class='k'>=</span> <span class='n'>invert</span><span class='o'>(</span><span class='n'>clustering</span><span class='o'>)</span>
+
+    <span class='n'>inversion</span><span class='o'>.</span><span class='n'>flatMap</span> <span class='o'>{</span> <span class='k'>case</span> <span class='o'>(</span><span class='n'>oldMean</span><span class='o'>,</span> <span class='n'>vectors</span><span class='o'>)</span> <span class='k'>=&gt;</span>
+      <span class='k'>val</span> <span class='n'>newMean</span> <span class='k'>=</span> <span class='n'>buildMean</span><span class='o'>(</span><span class='n'>vectors</span><span class='o'>)</span>
+      <span class='n'>vectors</span><span class='o'>.</span><span class='n'>map</span> <span class='o'>{</span> <span class='n'>v</span> <span class='k'>=&gt;</span> <span class='o'>(</span><span class='n'>v</span><span class='o'>,</span> <span class='n'>newMean</span><span class='o'>)</span> <span class='o'>}</span>
+    <span class='o'>}.</span><span class='n'>toMap</span>
+
+  <span class='o'>}</span>
+<span class='o'>}</span>
+</code></pre>
+</div>
 
   <address class="signature">
     <a class="author" href="http://hartmanster.com">Josh Hartman</a>
@@ -96,10 +163,22 @@
   </address>
 </div><!-- End Page -->
 
+    <!-- Place this tag where you want the +1 button to render -->
+    <g:plusone></g:plusone>
+
+    <!-- Place this render call where appropriate -->
+    <script type="text/javascript">
+        (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+
   <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'example'; // required: replace example with your forum shortname
+        var disqus_shortname = 'hartmanster';
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {

@@ -37,6 +37,7 @@
       <include name="scala-library.jar"/>
     </fileset>
     <fileset dir="lib/jetty" includes="*.jar"/>
+    <fileset dir="lib" includes="*.jar"/>
   </path>
 
   <target name="libs" description="Copy libs to WEB-INF/lib">
@@ -160,7 +161,7 @@
   </target>
 
     <target name="jetty" description="Launch jetty server">
-        <java failonerror="true" fork="true" classname="josh.server.LaunchJetty">
+        <java spawn="true" fork="true" classname="josh.server.LaunchJetty">
             <classpath>
                 <pathelement location="war/WEB-INF/lib"/>
                 <pathelement location="war/WEB-INF/classes"/>
@@ -170,8 +171,10 @@
                 <pathelement location="war/WEB-INF/jribble-shared"/>
                 <path refid="project.server.class.path"/>
             </classpath>
-            <jvmarg value="-Xmx2048m"/>
+            <jvmarg value="-Xmx128m"/>
+            <jvmarg value="-Xms128m"/>
             <jvmarg value="-server"/>
+            <arg value="-DDEBUG"/>
         </java>
     </target>
 
@@ -200,6 +203,11 @@
     <delete dir="war/WEB-INF/jribble-shared" failonerror="false" />
     <delete dir="war/WEB-INF/jribble-client" failonerror="false" />
     <delete dir="war/WEB-INF/jribble" failonerror="false" />
+
+    <delete dir="/tmp/jribble-client" failonerror="false" />
+    <delete dir="/tmp/jribble-shared" failonerror="false" />
+    <delete dir="/tmp/jribble-client" failonerror="false" />
+    <delete dir="/tmp/md-cache" failonerror="false" />
 
     <delete dir="war/WEB-INF/deploy" failonerror="false" />
     <delete dir="war/blog" failonerror="false" />
